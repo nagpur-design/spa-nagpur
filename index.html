@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagpur Spa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+   integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+   crossorigin=""></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Nagpur Spa",
+      "image": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nagpur",
+        "addressLocality": "Nagpur",
+        "addressRegion": "Maharashtra",
+        "postalCode": "440001",
+        "addressCountry": "India"
+      },
+      "telephone": "+91 712 1234567",
+      "openingHours": "10am - 6pm",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "21.1458",
+        "longitude": "79.0882"
+      }
+    }
+    </script>
+</head>
+<body>
+    <nav class="sticky top-0 bg-white shadow-lg py-4">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-center">
+            <h2 class="text-2xl font-bold">Nagpur Spa</h2>
+            <button id="hamburger" class="lg:hidden flex justify-center w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded-lg">
+                <span class="block w-2 h-2 bg-black rounded-lg my-1"></span>
+                <span class="block w-2 h-2 bg-black rounded-lg my-1"></span>
+                <span class="block w-2 h-2 bg-black rounded-lg my-1"></span>
+            </button>
+            <ul id="nav-menu" class="hidden lg:flex items-center space-x-8">
+                <li><a href="#services" class="text-lg hover:text-blue-600">Services</a></li>
+                <li><a href="#about" class="text-lg hover:text-blue-600">About</a></li>
+                <li><a href="#testimonials" class="text-lg hover:text-blue-600">Testimonials</a></li>
+                <li><a href="#contact" class="text-lg hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="hero" class="h-[80vh] bg-gradient-to-r from-blue-500 to-blue-800 text-white py-16 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center h-full">
+            <h1 class="text-4xl md:text-6xl font-bold">Welcome to Nagpur Spa</h1>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg mt-8">Read More</button>
+        </div>
+    </section>
+    <section id="services" class="py-16 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">💆‍♀️ Massage Therapy</h3>
+                    <p>Our expert massage therapists will help you relax and rejuvenate with our range of massage therapies, including Swedish, deep tissue, and hot stone massages.</p>
+                </div>
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">🌿 Aromatherapy</h3>
+                    <p>Our aromatherapy sessions use essential oils to promote relaxation, reduce stress, and improve overall well-being. Choose from a range of scents, including lavender, chamomile, and eucalyptus.</p>
+                </div>
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">💅 Facial Treatments</h3>
+                    <p>Our facial treatments include a range of options, from basic cleansing and moisturizing to advanced treatments like chemical peels and microdermabrasion.</p>
+                </div>
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">👣 Reflexology</h3>
+                    <p>Our reflexology sessions target specific pressure points on the feet to promote relaxation, reduce pain, and improve overall health.</p>
+                </div>
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">🏋️‍♀️ Body Wraps</h3>
+                    <p>Our body wraps use natural ingredients like seaweed, mud, and herbs to detoxify and nourish the skin, leaving you feeling smooth and refreshed.</p>
+                </div>
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">👫 Couples Spa Packages</h3>
+                    <p>Our couples spa packages include a range of treatments, from massages and facials to body wraps and aromatherapy, all designed to help you and your partner relax and rejuvenate together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-16 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">About Us</h2>
+            <p>Nagpur Spa is a team of expert therapists and technicians dedicated to providing the highest quality spa services in Nagpur. With years of experience in the industry, we have developed a range of treatments and packages designed to help you relax, rejuvenate, and feel your best. Our team is passionate about delivering exceptional service and ensuring that every client leaves feeling pampered and satisfied.</p>
+            <p>We are committed to using only the highest quality products and techniques, and our state-of-the-art facilities are designed to provide a comfortable and relaxing environment for all our clients. Whether you're looking to reduce stress, improve your skin, or simply indulge in some well-deserved pampering, we have a treatment or package to suit your needs.</p>
+        </div>
+    </section>
+    <section id="testimonials" class="py-16 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">⭐⭐⭐⭐⭐ - Rajesh</h3>
+                    <p>I've been going to Nagpur Spa for months now, and I can honestly say it's the best spa experience I've ever had. The therapists are expertly trained, the facilities are top-notch, and the prices are very reasonable. I highly recommend it to anyone looking to relax and rejuvenate.</p>
+                </div>
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">⭐⭐⭐⭐⭐ - Priya</h3>
+                    <p>I was a bit skeptical about trying a new spa, but Nagpur Spa exceeded all my expectations. The aromatherapy session I had was amazing, and the therapist was very knowledgeable and professional. I left feeling completely relaxed and refreshed, and I'll definitely be back for more.</p>
+                </div>
+                <div class="bg-white shadow-lg p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">⭐⭐⭐⭐⭐ - Anita</h3>
+                    <p>I've tried a few different spas in Nagpur, but Nagpur Spa is by far the best. The facilities are modern and clean, the staff is friendly and welcoming, and the treatments are all top-quality. I highly recommend the couples spa package - it's a great way to spend quality time with your partner and relax together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-16 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+            <form action="https://formspree.io/f/xbdzenyd" method="POST" id="contact-form" class="space-y-4">
+                <input type="hidden" name="_subject" value="New inquiry from ">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded-lg focus:ring-2 outline-none">
+                <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 border rounded-lg focus:ring-2 outline-none">
+                <textarea name="message" placeholder="Your Message" rows="4" required class="w-full p-3 border rounded-lg focus:ring-2 outline-none"></textarea>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <section class="py-16 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Our Location</h2>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </div>
+    </section>
+    <footer class="bg-gray-200 py-16 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-lg">Copyright 2024 Nagpur Spa. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // hamburger toggle
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.getElementById('nav-menu').classList.toggle('hidden');
+        });
+        // nav scroll effect
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                document.querySelector('nav').classList.add('shadow-lg');
+            } else {
+                document.querySelector('nav').classList.remove('shadow-lg');
+            }
+        });
+        // form fetch
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            fetch('https://formspree.io/f/xbdzenyd', {
+                method: 'POST',
+                body: new FormData(e.target)
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+        });
+        // leaflet map
+        var map = L.map('map').setView([21.1458, 79.0882], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
+            subdomains: ['a', 'b', 'c']
+        }).addTo(map);
+        var marker = L.marker([21.1458, 79.0882]).addTo(map);
+        marker.bindPopup('Nagpur Spa');
+    </script>
+</body>
+</html>
